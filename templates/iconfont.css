@@ -1,0 +1,36 @@
+/*
+ * @Author: wangguixing
+ * @Date: 2023-06-02 11:37:01
+ * @LastEditors: wangguixing
+ * @LastEditTime: 2023-06-02 15:04:54
+ * @FilePath: \templates\iconfont.css
+ */
+
+@font-face {
+	font-family: "<%= fontName %>";
+	src: url('<%= fontPath %><%= fontName %>.eot');
+	src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+		url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+		url('<%= fontPath %><%= fontName %>.ttf') format('truetype');
+}
+
+
+[class^="<%= prefix %>-"], [class*=" <%= prefix %>-"] {
+	font-family: "<%= fontName %>" !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: baseline;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+<% _.each(glyphs, function(glyph) { %>
+.<%= glyph.name %>:before {
+	content: "\<%= glyph.unicode[0].codePointAt(0).toString(16).toUpperCase() %>";
+}
+<% }); %>

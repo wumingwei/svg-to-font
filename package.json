@@ -1,0 +1,36 @@
+{
+  "name": "svg-to-font",
+  "version": "1.0.0",
+  "author": "wangguixing",
+  "description": "将svg图标转化成iconfont",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "keywords": [
+    "svg",
+    "iconfont",
+    "gulp"
+  ],
+  "files": [
+    "gulpfile.js",
+    "templates/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangguixing/svg-to-font.git"
+  },
+  "scripts": {
+    "build": "gulp del && gulp gen-iconfont",
+    "symbol": "gulp del && gulp gen-symbol"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-iconfont": "^11.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-template": "^5.0.0",
+    "through2": "^4.0.2",
+    "word-pinyin": "^0.1.8"
+  }
+}
